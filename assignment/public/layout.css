@@ -1,0 +1,137 @@
+* {margin: 0; padding: 0;}
+
+body {background-color: var(--color-crimson-200); font-family: var(--font-nunito);
+	display: grid;
+  grid-template-columns: 15% 80% 5%;
+    grid-template-rows: auto;
+	grid-template-areas: "header header header"
+	"main main main"
+	"footer footer footer";
+}
+
+.logo{height: 100px;width: 200px;}
+header {font: var(--font-nunito); background-color: var(--color-black); grid-area: header;}
+header a { color: var(--color-pink); text-decoration: none; }
+
+/*ADDRESS*/
+address {float: right; color: var(--color-pink); font-style: normal; padding: 2.5em;}
+address ul {align-self:auto; display: grid; grid-template-columns: auto auto auto auto; grid-template-rows: auto; color: var(--color-pink); list-style-type: none;}
+address > ul > li {font-size: 1.15em; cursor: pointer; text-align: center; position: relative;}
+address ul li i ul {left: 50%; transform: translateX(-50%); text-align: left; display: none; position: absolute; background-color: var(--color-black); padding: 2px;}
+address ul li i ul li {padding: 0.5vw;}
+address ul li i:hover ul {display: block;}
+
+.filt{background-color: var(--color-pink); border-radius: 20px; min-height: 20vh; grid-area: filt; padding: 2vw; margin-top: 26px; color: var(--color-black);}
+
+main {min-height: 20vh; grid-area: main; padding: 2vw; background-color:var(--color-crimson-200);}
+footer {min-height: 20vh; grid-area: footer; padding: 2vw; background-color:var(--color-crimson-200);}
+aside {background-color: var(--color-pink); border-radius: 20px; min-height: 20vh; grid-area: aside; padding: 2vw; margin-top: 26px; color: var(--color-black);}
+
+/*HEADER*/
+header { display: grid;  grid-template-columns: 20% 60% 20%;}
+header ul {align-self: center; display: grid; grid-template-columns: auto auto auto auto auto; grid-template-rows: auto; color: var(--color-pink); list-style-type: none;}
+header > ul > li {font-size: var(--font-size-base); cursor: pointer; text-align: center; position: relative;}
+header ul li ul {left: 50%; transform: translateX(-50%); text-align: left; display: none; position: absolute; background-color: var(--color-black); padding: 20px; border-radius: 20px; z-index: 9999;}
+header ul li ul li {padding: 1vw;}
+header ul li:hover ul {display: block;}
+
+/*FOOTER*/
+footer ul {display: flex;justify-content: space-around;padding: 20px 0;list-style-type: none;}
+footer ul li {position: relative;}
+footer ul li ul {display: block;position: absolute;top: 100%;left: 0;padding: 10px;border-radius: 5px;}
+footer ul li ul li {padding: 5px 0;color: var(--color-white);}
+footer i {color: var(--color-pink);}
+.icons {display: flex;justify-content: space-around; font-size: 20px; width: 30%;padding-left: 480px;padding-top: 200px;}
+.all-rights-reserved {display: flex;color: var(--color-white);justify-content: space-around;padding-left: 50px;padding-top: 50px;}
+footer ul li ul li a{text-decoration: none;color: var(--color-white);}
+/*PRODUCTS*/
+.shop{margin-top: 2rem;}
+.shop_content{padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, auto)); gap: 1.5rem;background:antiquewhite;border-radius: 2rem;}
+.product_box {padding: 40px;position: relative;background-color: #fff;border-radius: 1rem;}
+.product_box:hover{padding: 10px; border: 1px solid var(--color-black); transition: 0.4s;}
+.product_img {width: 100%;height: 50%;margin-bottom: 0.5rem;}
+.product_title{font-size: 1.1rem;font-weight: 600;text-transform: uppercase; margin-bottom: 0.5rem;}
+.price {font-weight: bold;color: var(--color-black);}
+.add_cart {background-color: #007bff;color: #fff;border: none;padding: 10px;border-radius: 5px;
+cursor: pointer;margin-left: 150px;position: absolute;right: 0;bottom: 0;}
+.add_cart:hover {background-color: #0056b3;}
+.indexList{text-decoration: none; color: var(--color-black);}
+.reviewsList{text-decoration: none; list-style: none;}
+
+/*CART*/
+.cart{position:fixed; color: var(--color-pink); top: 0;right: -100%;width: 350px;min-height: 100vh;padding: 20px;background: var(--color-black);box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);transition: 0.3s;z-index: 9999;}
+.cart.active{right: 0%;}
+.cart_title{text-align: center; font-size: 1.5rem; font-weight: 600; margin-top: 2rem;}
+.cart_box{display: grid; grid-template-columns: 32% 50% 18%; align-items: center; gap: 1rem; margin-top: 1rem;}
+.cart_img{width: 100px;height: 100px; object-fit: contain;padding: 10px;}
+.details_box{display: grid;row-gap: 0.5rem;}
+.cart_product_title{font-size: 1rem;text-transform: uppercase;}
+.cart_price{font-weight: 500;}
+.cart_quantity{border: 1px solid var(--color-pink); outline-color: var(--color-white);width: 2.4rem;text-align: center;font-size: 1rem;}
+.cart_remove{font-size: 20px; cursor: pointer;}
+.total{display: flex;justify-content: flex-end;margin-top: 1.5rem;border-top: 1px solid var(--color-pink);}
+.total_title{font-size: 1rem;font-weight: 600;}
+.total_price{margin-left: 0.5rem;}
+.btn_buy{display: flex; margin-left: 125px; padding: 12px 20px;border: none; background: var(--color-crimson-200); color: var(--color-white);font-size: 1rem;font-weight: 500;cursor: pointer;}
+#close_cart{position: absolute;top: 1rem;right: 0.8rem;font-size: 1.5rem;cursor: pointer;}
+
+
+/*Contact page*/
+.product-form {
+    width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color:antiquewhite;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.sub_btn{width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.contactform {
+    color: var(--color-white);
+    text-align: center;
+    margin-bottom: 20px;
+}
