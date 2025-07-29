@@ -1,5 +1,5 @@
 <hr />
-<label class="contactform">Product Category:</label>
+<label class="contactform">Product Categories:</label>
 <form action="addcategories.php" method="POST" class="product-form">
     <div class="form-group">
         <input type="text" name="name" />
